@@ -8,7 +8,7 @@ curl -O https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>/tmp/robosho
 unzip frontend.zip &>>/tmp/roboshop.log
 rm -rf frontend.zip
 echo -e  "\e[32mCONFIGURING REVERSE PROXY SERVER\e[0m"
-cp /root/roboshop-shell/roboshop.conf  /etc/nginx/default.d/roboshop.conf
+cp /root/repo-shell/roboshop.conf  /etc/nginx/default.d/roboshop.conf
 echo -e "\e[32m ENABLEING AND RESTARTING NGINX\e[0m"
 systemctl enable nginx &>>/tmp/roboshop.log
 systemctl restart nginx
