@@ -14,7 +14,7 @@ npm install
 echo -e "\e[32m creating user service file\e[0m"
 cp /root/repo-shell/user.service /etc/systemd/system/user.service
 echo -e "\e[32m downloading and installing mongod schema\e[0m"
-cp /root/repo-shell/mongodb.repo /etc/yum.repos.d/mongo.repo
+cp /root/repo-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb-dev.sindhu.cloud </app/schema/user.js
 echo -e "\e[32m enabling and restarting the user service\e[0m"
