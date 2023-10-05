@@ -14,7 +14,7 @@ echo -e "\e[32m creating shipping service file\e[0m"
 cp /root/repo-shell/shipping.service /etc/systemd/system/shipping.service
 echo -e "\e[32m downloading and installing mysql schema\e[0m"
 yum install mysql -y
-mysql -h mysql-dev.sindhu.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql
+mysql -h mysql-dev.sindhu.cloud -uroot -pRoboShop@1 </app/schema/shipping.sql
 echo -e "\e[32m enabling and restarting the shipping service\e[0m"
 systemctl daemon-reload
 systemctl enable shipping
