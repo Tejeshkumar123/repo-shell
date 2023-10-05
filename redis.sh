@@ -1,5 +1,4 @@
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
-Yum module list
 yum module enable redis:remi-6.2 -y
 echo -e "\e[32m installing the redis\e[0m"
 yum install redis -y
