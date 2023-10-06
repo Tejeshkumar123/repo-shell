@@ -1,12 +1,16 @@
-echo -e "\e[32m disabling mysql defult version\e[0m"
-yum module disable mysql -y
-echo -e "\e[32m setting mysql repo\e[0m"
+color="\e[32m"
+nocolor="\e[0m"
+logfile="/tmp/roboshop.log"
+
+echo -e "$color disabling mysql defult version$nocolor"
+yum module disable mysql -y &>>${logfile}
+echo -e "$color setting mysql repo$nocolor"
 cp /root/repo-shell/mysql.repo /etc/yum.repos.d/mysql.repo
-echo -e "\e[32m installing mysql server\e[0m"
-yum install mysql-community-server -y
-echo -e "\e[32m changing defult root password\e[0m"
-mysql_secure_installation --set-root-pass RoboShop@1
-echo -e "\e[32m enabling and starting mysql server\e[0m"
-systemctl enable mysqld
+echo -e "$color installing mysql server$nocolor"
+yum install mysql-community-server -y &>>${logfile}
+echo -e "$color changing defult root password$nocolor"
+mysql_secure_installation --set-root-pass RoboShop@1 &>>${logfile}
+echo -e "$color enabling and starting mysql server$nocolor"
+systemctl enable mysqld &>>${logfile}
 systemctl restart mysqld
 
