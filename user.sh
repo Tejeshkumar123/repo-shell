@@ -20,4 +20,4 @@ mongo --host mongodb-dev.sindhu.cloud </app/schema/user.js
 echo -e "\e[32m ENABLEING AND STARTING THE user SERVICE\e[0m"
 systemctl daemon-reload
 systemctl enable user
-systemctl restart user
+systemctl restart userus
