@@ -13,4 +13,3 @@ mysql_secure_installation --set-root-pass RoboShop@1 &>>${logfile}
 echo -e "$color enabling and starting mysql server$nocolor"
 systemctl enable mysqld &>>${logfile}
 systemctl restart mysqld
-
