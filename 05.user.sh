@@ -21,7 +21,7 @@ cp /root/repo-shell/user.service /etc/systemd/system/user.service
 echo -e "$color DOWNLOADING AND INSTALLING THE MONGODB SCHEMA$nocolor"
 cp /root/repo-shell/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y &>>${logfile}
-mongo --host mongodb-dev.sindhu.cloud <${app_path}/schema/user.js &>>${logfile}
+mongo --host mongodb-dev.tejesh.cloud <${app_path}/schema/user.js &>>${logfile}
 echo -e "$color ENABLEING AND STARTING THE user SERVICE$nocolor"
 systemctl daemon-reload
 systemctl enable user &>>${logfile}
