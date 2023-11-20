@@ -4,7 +4,7 @@ logfile="/tmp/roboshop.log"
 
 echo -e "$color INSTALLING NGINX SERVICE$nocolor"
 yum install nginx -y &>>${logfile}
-echo -e "$color REMOVING DEFAULT NGINX CONTENT$nocolor"
+echo -e "$color Removing DEFAULT NGINX CONTENT$nocolor"
 cd /usr/share/nginx/html
 rm -rf *
 echo -e  "$color DOWNLOADING NEW CONTENT TO NGINX$nocolor"
