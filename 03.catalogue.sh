@@ -3,7 +3,7 @@ nocolor="\e[0m"
 logfile="/tmp/roboshop.log"
 app_path="/app"
 echo -e "$color DOWNLOADING NODEJS REPO$nocolor"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${logfile}
+curl -sL https://rpm.nodesource.com/setup_19.x | sudo -E bash - &>>${logfile}
 echo -e "$color INSTALLING NODEJS SERVICE$nocolor"
 yum install nodejs -y &>>${logfile}
 echo -e "$color ADDING USER AND LOCATION$nocolor"
